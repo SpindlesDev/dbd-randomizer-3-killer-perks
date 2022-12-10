@@ -1,4 +1,8 @@
 <template>
+  <v-banner color="secondary" rounded single-line sticky
+    >This is a custom fork of https://github.com/joeytierney/dbd-randomizer for
+    killers who must use Shadowborn</v-banner
+  >
   <div id="app">
     <NavBar />
   </div>

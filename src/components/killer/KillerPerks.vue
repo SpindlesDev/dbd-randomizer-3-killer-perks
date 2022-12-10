@@ -1,7 +1,7 @@
 <template>
   <h1>Killer Perks</h1>
   <div class="perks">
-    <div v-for="index in 4" :key="index" class="selected-perk">
+    <div v-for="index in 3" :key="index" class="selected-perk">
       <PerkPlaceholder v-if="placeholder" />
     </div>
     <label v-if="placeholder" class="text-center">Click the icon below!</label>
@@ -43,18 +43,6 @@
       />
       <label>Reroll Perk</label>
     </div>
-    <div class="selected-perk">
-      <img :src="perkFour.image" :alt="perkFour.name" />
-      <h1>{{ perkFour.name }}</h1>
-      <h3>{{ perkFour.teachable }}</h3>
-      <img
-        src="https://raw.githubusercontent.com/joeytierney/dbd-vue/develop/src/assets/general-icons/random-reroll-icon.png"
-        alt="Click here to reroll the perk above!"
-        @click="rerollFour()"
-        class="reroll-button"
-      />
-      <label>Reroll Perk</label>
-    </div>
   </div>
   <ButtonPerk @click="randomizer()" />
 </template>
@@ -75,7 +63,6 @@ export default {
       perkOne: "",
       perkTwo: "",
       perkThree: "",
-      perkFour: "",
       visible: false,
       placeholder: true,
     };
@@ -85,72 +72,40 @@ export default {
       const perkOne = Math.floor(Math.random() * this.killerPerks.length);
       const perkTwo = Math.floor(Math.random() * this.killerPerks.length);
       const perkThree = Math.floor(Math.random() * this.killerPerks.length);
-      const perkFour = Math.floor(Math.random() * this.killerPerks.length);
 
       this.perkOne = this.killerPerks[perkOne];
       this.perkTwo = this.killerPerks[perkTwo];
       this.perkThree = this.killerPerks[perkThree];
-      this.perkFour = this.killerPerks[perkFour];
 
       this.repeatPerks();
     },
     repeatPerks() {
-      if (
-        this.perkOne === this.perkTwo ||
-        this.perkOne === this.perkThree ||
-        this.perkOne === this.perkFour
-      ) {
+      if (this.perkOne === this.perkTwo || this.perkOne === this.perkThree) {
         this.randomArray();
       }
-      if (this.perkTwo === this.perkThree || this.perkTwo === this.perkFour) {
-        this.randomArray();
-      }
-      if (this.perkThree === this.perkFour) {
+      if (this.perkTwo === this.perkThree) {
         this.randomArray();
       }
     },
     rerollOne() {
       const perkOne = Math.floor(Math.random() * this.killerPerks.length);
       this.perkOne = this.killerPerks[perkOne];
-      if (
-        this.perkOne === this.perkTwo ||
-        this.perkOne === this.perkThree ||
-        this.perkOne === this.perkFour
-      ) {
+      if (this.perkOne === this.perkTwo || this.perkOne === this.perkThree) {
         this.rerollOne();
       }
     },
     rerollTwo() {
       const perkTwo = Math.floor(Math.random() * this.killerPerks.length);
       this.perkTwo = this.killerPerks[perkTwo];
-      if (
-        this.perkTwo === this.perkOne ||
-        this.perkTwo === this.perkThree ||
-        this.perkTwo === this.perkFour
-      ) {
+      if (this.perkTwo === this.perkOne || this.perkTwo === this.perkThree) {
         this.rerollTwo();
       }
     },
     rerollThree() {
       const perkThree = Math.floor(Math.random() * this.killerPerks.length);
       this.perkThree = this.killerPerks[perkThree];
-      if (
-        this.perkThree === this.perkOne ||
-        this.perkThree === this.perkTwo ||
-        this.perkThree === this.perkFour
-      ) {
+      if (this.perkThree === this.perkOne || this.perkThree === this.perkTwo) {
         this.rerollThree();
-      }
-    },
-    rerollFour() {
-      const perkFour = Math.floor(Math.random() * this.killerPerks.length);
-      this.perkFour = this.killerPerks[perkFour];
-      if (
-        this.perkFour === this.perkOne ||
-        this.perkFour === this.perkTwo ||
-        this.perkFour === this.perkThree
-      ) {
-        this.rerollFour();
       }
     },
     randomizer() {
