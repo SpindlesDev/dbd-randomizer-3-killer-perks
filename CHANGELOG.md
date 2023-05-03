@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.13](https://github.com/SpindlesDev/dbd-randomizer-3-killer-perks/compare/v0.1.12...v0.1.13) (2023-05-03)
+
+
+### Features
+
+* chapter 26 killer and survivor character portraits added ([41a482c](https://github.com/SpindlesDev/dbd-randomizer-3-killer-perks/commit/41a482c81be74e3e75f91072cdd273d85272f4d4))
+* new killer perks from chapter 26 added to KillerPerkArray.js ([01001c4](https://github.com/SpindlesDev/dbd-randomizer-3-killer-perks/commit/01001c4c51a3b0fc6c3e24bf974ab6fc028f3959))
+* new killer The Knight added to KillerArray.js ([0c28584](https://github.com/SpindlesDev/dbd-randomizer-3-killer-perks/commit/0c2858484c8ebd4a46bbf045a28fc1dd27c841f9))
+* new survivor perks from chapter 26 added to SurvivorPerkArray.js ([1a744c4](https://github.com/SpindlesDev/dbd-randomizer-3-killer-perks/commit/1a744c448fa8924203c3085154d316c40a39a33a))
+* new survivor Vittorio Toscano added to SurvivorArray.js ([e6583e0](https://github.com/SpindlesDev/dbd-randomizer-3-killer-perks/commit/e6583e05860ff02b4a332f44a387ded126d2de32))
+* perk icons added for both chapter 26 killer and survivor ([0a51c1a](https://github.com/SpindlesDev/dbd-randomizer-3-killer-perks/commit/0a51c1a2c5d13f17df250bb55fcddde28f8184ce))
+
 ### [0.1.12](https://github.com/SpindlesDev/dbd-randomizer-3-killer-perks/compare/v0.1.11...v0.1.12) (2022-12-10)
 
 ### 0.1.11 (2022-12-10)
